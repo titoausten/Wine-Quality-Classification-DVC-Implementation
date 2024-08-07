@@ -1,0 +1,10 @@
+dvclive
+scikit-learn
+matplotlib
+pandas
+numpy
+pyyaml
+joblib
+python-box==6.0.2
+pyYAML
+ensure
