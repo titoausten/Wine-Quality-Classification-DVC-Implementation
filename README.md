@@ -36,9 +36,13 @@ dvc remote add -d local path/to/preferred/directory
 dvc repro
 ```
 ### Note: For Module not found error, set PYTHONPATH to project directory.
+- Command Prompt implementation
 ```
-# Command Prompt implementation
 set PYTHONPATH=%;C:\Path\to\Wine-Quality-Classification-DVC-Implementation
+```
+- Linux/bash implementation
+```
+export PYTHONPATH=\Path\to\Wine-Quality-Classification-DVC-Implementation
 ```
 
 7. View evaluation metrics:
