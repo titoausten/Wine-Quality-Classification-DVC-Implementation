@@ -1,0 +1,33 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://raw.githubusercontent.com/TripathiAshutosh/dataset/main/red_wine.csv
+  local_data_file: artifacts/data_ingestion/wine_data.csv
+
+data_validation:
+  root_dir: artifacts/data_validation
+  local_data_dir: artifacts/data_ingestion/wine_data.csv
+  STATUS_FILE: artifacts/data_validation/status.txt
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/wine_data.csv
+  train_file: artifacts/data_transformation/train.csv
+  test_file: artifacts/data_transformation/test.csv
+  split_ratio: 0.20
+  random_state: 47
+
+model_training:
+  root_dir: artifacts/model
+  train_data_path: artifacts/data_transformation/train.csv
+  test_data_path: artifacts/data_transformation/test.csv
+  model_name: artifacts/model/wine_model.joblib
+  random_state: 101
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  train_data_path: artifacts/data_transformation/train.csv
+  test_data_path: artifacts/data_transformation/test.csv
+  model_path: artifacts/model/wine_model.joblib
+  metric_file_name: artifacts/model_evaluation/metrics.json
