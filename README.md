@@ -13,33 +13,27 @@ git clone https://github.com/titoausten/Wine-Quality-Classification-DVC-Implemen
 2. Install requirements:
 ```
 pip install -r requirements.txt
-
 ```
 
 3. Initialize DVC:
 ```
-dvc init!
-
-
+dvc init
 ```
 
 4. View pipelines to be created and the relationship between pipelines (optional):
 ```
 dvc dag
-
 ```
-[dvc_dag1](https://github.com/user-attachments/assets/9985f144-1e21-43bf-9c01-901476dc248a)
+<img src="dvc_dag1.png" alt="workflow" width="70%">
 
 5. Add local backend store (optional):
 ```
 dvc remote add -d local path/to/preferred/directory
-
 ```
 
 6. Start pipeline to run ML project:
 ```
 dvc repro
-
 ```
 ### Note: For Module not found error, set PYTHONPATH to project directory.
 ```
@@ -50,13 +44,11 @@ set PYTHONPATH=%;C:\Path\to\Wine-Quality-Classification-DVC-Implementation
 7. View evaluation metrics:
 ```
 dvc metrics show
-
 ```
 
 8. Create plots:
 ```
 dvc plots show
-
 ```
 
 
